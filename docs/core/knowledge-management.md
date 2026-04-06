@@ -11,6 +11,8 @@ Use this document to decide where information should live.
 - Takeaways: lessons that should change future work
 
 Record these first in the active plan so they are not lost.
+During incident response, record them in the active incident report instead of
+leaving them in chat or memory.
 
 ## Promotion Rules
 
@@ -23,23 +25,26 @@ Record these first in the active plan so they are not lost.
   or acceptance criteria.
 - Put it in `docs/quality/` if it changes testing, observability, reliability,
   or security practice.
+- Put it in `docs/operations/` if it is incident history, operator-facing
+  recovery guidance, or a runbook that should be available during response.
 - Put it in `docs/playbooks/` if it is stack-specific guidance.
 - Put it in `docs/decisions/` if it is a durable cross-cutting decision with
   tradeoffs.
 - Put it in `docs/plans/tech-debt.md` if it is important but intentionally
   deferred.
 
-## What Should Stay In the Plan
+## What Should Stay In the Plan or Incident Report
 
 - Temporary investigation trails
 - Dead-end hypotheses
 - Task-specific implementation notes
-- Validation details for a single change
+- Validation details for a single change or incident
 - Work that matters historically but does not change future default behavior
 
 ## Update Cadence
 
-- Add hypotheses before implementation starts.
+- Add hypotheses before implementation starts or as soon as they appear during
+  incident response.
 - Replace hypotheses with findings as they are confirmed or disproved.
 - Record decisions when they are made, not at the end from memory.
 - Promote durable takeaways before marking the change complete.

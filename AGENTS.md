@@ -13,6 +13,7 @@ detailed, durable knowledge under `docs/`.
    - Frontend: `docs/playbooks/frontend.md`
    - Mobile: `docs/playbooks/mobile.md`
    - DevOps/platform: `docs/playbooks/devops.md`
+   - Operations/incident response: `docs/operations/index.md`
 4. If the task changes architecture, behavior contracts, testing strategy, or
    reliability/security posture, read the matching docs in `docs/`.
 
@@ -22,6 +23,8 @@ detailed, durable knowledge under `docs/`.
   `docs/plans/active/YYYY-MM-DD-short-slug.md`.
 - Use `docs/plans/lightweight-template.md` for small changes. Use
   `docs/plans/PLANS.md` for multi-step, risky, or multi-hour work.
+- Incident reports live in `docs/operations/incidents/`, but they do not
+  replace the required change plan when tracked files change.
 - Keep the plan live while working. Record progress, hypotheses, findings,
   decisions, and validation results as they happen.
 - Write tests before implementation when changing executable behavior. Start
@@ -46,6 +49,7 @@ detailed, durable knowledge under `docs/`.
 - Architecture and boundaries: `docs/architecture/`
 - Behavior contracts and journeys: `docs/specs/`
 - Testing, observability, reliability, security: `docs/quality/`
+- Operations, incidents, runbooks: `docs/operations/`
 - Stack-specific guidance: `docs/playbooks/`
 - Cross-cutting decisions: `docs/decisions/`
 - External references: `docs/references/`
@@ -60,10 +64,12 @@ detailed, durable knowledge under `docs/`.
 - Put user-visible or system-visible behavior in `docs/specs/`.
 - Put testing, observability, reliability, and security practices in
   `docs/quality/`.
+- Put incident reports, runbooks, and recovery procedures in
+  `docs/operations/`.
 - Put stack-specific patterns in `docs/playbooks/`.
 - Put durable decisions with tradeoffs in `docs/decisions/`.
-- Put transient work notes in the active/completed plan unless they become
-  durable guidance or deferred debt.
+- Put transient work notes in the active/completed plan or incident report
+  unless they become durable guidance or deferred debt.
 
 ## Per-Change Workflow
 

@@ -16,6 +16,10 @@ This is the required change loop for repository work.
 - Use `docs/plans/PLANS.md` for multi-step, risky, or multi-hour work.
 - Capture the change description, expected observable behavior, hypotheses,
   validation plan, and intended observability changes.
+- Incident reports belong in `docs/operations/incidents/` and capture live
+  operational response notes.
+- If incident mitigation changes tracked files, still create or update a normal
+  change plan in `docs/plans/active/`. Incident reports do not replace plans.
 
 ## 3. Write Failing Tests First
 
@@ -52,6 +56,9 @@ intended workflow.
 
 - Move lasting rules into `AGENTS.md` only if they affect most tasks.
 - Otherwise update the appropriate document under `docs/`.
+- Promote incident takeaways into the right durable home: `docs/operations/`
+  for operator-facing recovery material, other `docs/` areas for new defaults
+  or contracts, and `docs/plans/tech-debt.md` for deferred follow-up work.
 - Record deferred work in `docs/plans/tech-debt.md`.
 
 ## 8. Close the Loop
