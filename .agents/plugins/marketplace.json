@@ -8,7 +8,7 @@
       "name": "your-harness",
       "source": {
         "source": "local",
-        "path": "../.."
+        "path": "./plugins/your-harness"
       },
       "policy": {
         "installation": "AVAILABLE",
