@@ -1,7 +1,7 @@
 {
-  "name": "local-your-harness",
+  "name": "michaelrocks-plugins",
   "interface": {
-    "displayName": "Local Harness Plugins"
+    "displayName": "MichaelRocks Plugins"
   },
   "plugins": [
     {

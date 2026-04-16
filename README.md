@@ -22,8 +22,8 @@ It ships two explicit-use skills:
 
 ## Local Use
 
-This checkout includes repo-local marketplace metadata at
-[`./.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json).
+This checkout includes repo-local marketplace metadata for `MichaelRocks
+Plugins` at [`./.agents/plugins/marketplace.json`](./.agents/plugins/marketplace.json).
 That entry points back to the repository root so the plugin can be tested from
 this checkout.
 
