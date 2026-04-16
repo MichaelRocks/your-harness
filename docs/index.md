@@ -1,15 +1,17 @@
 # Docs Index
 
-This `docs/` tree is the system of record for the repository. `AGENTS.md`
-should stay short and route readers here.
+This `docs/` tree is the system of record for maintaining the `your-harness`
+plugin itself. The shipped harness copied into user repositories lives under
+`assets/harness-template/`.
 
 ## Read Order
 
 1. `docs/core/workflow.md`
 2. `docs/core/principles.md`
-3. The most relevant stack playbook in `docs/playbooks/` or operational guide
-   in `docs/operations/`
-4. Any architecture, spec, quality, or decision docs touched by the change
+3. The most relevant shared reference in `references/` if the change touches a
+   skill workflow
+4. The shipped template under `assets/harness-template/` if the change touches
+   generated user-project content
 
 ## If You Are Doing X, Read Y
 
@@ -18,42 +20,27 @@ should stay short and route readers here.
 | Planning any change | `docs/plans/lightweight-template.md` or `docs/plans/PLANS.md` |
 | Understanding the work loop | `docs/core/workflow.md` |
 | Deciding where knowledge belongs | `docs/core/knowledge-management.md` |
-| Changing system boundaries | `docs/architecture/index.md` |
-| Changing behavior or journeys | `docs/specs/index.md` |
-| Designing tests | `docs/quality/testing.md` |
-| Improving telemetry or debugging | `docs/quality/observability.md` |
-| Changing reliability characteristics | `docs/quality/reliability.md` |
-| Responding to or documenting an incident | `docs/operations/index.md` |
-| Writing runbooks or recovery procedures | `docs/operations/index.md` |
-| Making security-sensitive changes | `docs/quality/security.md` |
-| Working in backend code | `docs/playbooks/backend.md` |
-| Working in frontend code | `docs/playbooks/frontend.md` |
-| Working in mobile code | `docs/playbooks/mobile.md` |
-| Working in platform or infra | `docs/playbooks/devops.md` |
-| Recording a lasting cross-cutting decision | `docs/decisions/index.md` |
+| Changing the shipped scaffold | `assets/harness-template/AGENTS.md` |
+| Designing or updating helper tests | `docs/quality/testing.md` |
+| Improving CLI or skill diagnostics | `docs/quality/observability.md` |
+| Updating skill prompts or defaults | `references/create-harness-questionnaire.md` |
+| Updating adoption conflict policy | `references/adoption-conflict-policy.md` |
 
 ## Structure
 
-- `docs/core/`: repo-wide principles, workflow, knowledge rules, and future
-  enforcement policy.
+- `docs/core/`: plugin-maintainer workflow, principles, and knowledge rules.
 - `docs/plans/`: active/completed change plans plus planning templates.
-- `docs/architecture/`: system maps, boundaries, dependency rules, and other
-  structure docs.
-- `docs/specs/`: behavior and journey specs anchored to observable outcomes.
-- `docs/quality/`: testing, observability, reliability, and security guidance.
-- `docs/operations/`: incident reports, runbooks, and operator-facing
-  recovery material.
-- `docs/playbooks/`: stack-specific engineering guidance with a shared shape.
-- `docs/decisions/`: durable decision records and the template for new ones.
-- `docs/references/`: curated external material and vendor references.
-- `docs/generated/`: generated artifacts that should not bloat hand-written
-  docs.
+- `docs/quality/`: testing and observability expectations for helpers and
+  skills.
+- `assets/harness-template/`: canonical scaffold copied into user repos.
+- `references/`: shared skill inputs and adoption policy.
 
 ## Documentation Rules
 
 - Keep durable guidance in `docs/`, not in ad hoc chat history.
-- Keep transient work notes in the change plan or incident report until they
-  become durable.
+- Keep shipped scaffold guidance in `assets/harness-template/`, not only in the
+  root maintainer docs.
+- Keep transient work notes in the change plan until they become durable.
 - Favor cross-links over duplication.
 - When docs conflict, prefer the more specific doc, but fix the conflict rather
   than normalizing inconsistency.

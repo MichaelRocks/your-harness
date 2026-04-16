@@ -1,0 +1,6 @@
+interface:
+  display_name: "Your Harness"
+  short_description: "Bootstrap or adopt a durable repo harness."
+  icon_small: "./assets/your-harness.svg"
+  icon_large: "./assets/your-harness.svg"
+  default_prompt: "Use Your Harness to bootstrap a new repository scaffold or add the harness workflow to an existing project."

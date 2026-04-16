@@ -1,0 +1,37 @@
+{
+  "name": "your-harness",
+  "version": "0.1.0",
+  "description": "Bootstrap or adopt a durable harness workflow in local repositories.",
+  "author": {
+    "name": "Michael Rozumyanskiy",
+    "url": "https://github.com/michaelrocks/your-harness"
+  },
+  "homepage": "https://github.com/michaelrocks/your-harness",
+  "repository": "https://github.com/michaelrocks/your-harness",
+  "license": "MIT",
+  "keywords": [
+    "harness",
+    "docs",
+    "workflow",
+    "scaffold"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Your Harness",
+    "shortDescription": "Bootstrap or adopt a durable repo harness.",
+    "longDescription": "Create a fresh harness scaffold for a new repository or add the harness workflow to an existing codebase without overwriting existing files.",
+    "developerName": "Michael Rozumyanskiy",
+    "category": "Coding",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/michaelrocks/your-harness",
+    "defaultPrompt": "Use Your Harness to bootstrap a new repository scaffold or add the harness workflow to an existing project.",
+    "brandColor": "#1F6FEB",
+    "composerIcon": "./assets/your-harness.svg",
+    "logo": "./assets/your-harness.svg",
+    "screenshots": []
+  }
+}

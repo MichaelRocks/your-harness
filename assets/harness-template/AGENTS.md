@@ -1,19 +1,21 @@
 # AGENTS.md
 
-This repository ships the `your-harness` Codex plugin. Keep this file short.
-Treat it as a routing layer plus a small set of non-negotiable operating rules.
-Put detailed maintenance knowledge under `docs/`.
+This repository contains `{{PROJECT_NAME}}`. Product description:
+`{{PRODUCT_DESCRIPTION}}`. Use this file as a routing layer plus a small set of
+non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
 
 ## Start Here
 
 1. Open `docs/index.md`.
 2. Read `docs/core/workflow.md` before changing tracked files.
-3. Read `README.md` for local plugin usage and package layout.
-4. If the task changes shipped scaffold behavior, read
-   `assets/harness-template/AGENTS.md` and the matching docs under
-   `assets/harness-template/docs/`.
-5. If the task changes skill behavior, read the relevant skill under `skills/`
-   plus the shared references under `references/`.
+3. Read the most relevant stack or domain doc before implementing:
+   - Backend: `docs/playbooks/backend.md`
+   - Frontend: `docs/playbooks/frontend.md`
+   - Mobile: `docs/playbooks/mobile.md`
+   - DevOps/platform: `docs/playbooks/devops.md`
+   - Operations/incident response: `docs/operations/index.md`
+4. If the task changes architecture, behavior contracts, testing strategy, or
+   reliability/security posture, read the matching docs in `docs/`.
 
 ## Non-Negotiables
 
@@ -21,9 +23,8 @@ Put detailed maintenance knowledge under `docs/`.
   `docs/plans/active/YYYY-MM-DD-short-slug.md`.
 - Use `docs/plans/lightweight-template.md` for small changes. Use
   `docs/plans/PLANS.md` for multi-step, risky, or multi-hour work.
-- Keep the shipped scaffold canonical in `assets/harness-template/`. Do not
-  treat the repo root docs as the source copied into user projects.
-- Keep skills, helper scripts, and template docs aligned when behavior changes.
+- Incident reports live in `docs/operations/incidents/`, but they do not
+  replace the required change plan when tracked files change.
 - Keep the plan live while working. Record progress, hypotheses, findings,
   decisions, and validation results as they happen.
 - Write tests before implementation when changing executable behavior. Start
@@ -43,23 +44,32 @@ Put detailed maintenance knowledge under `docs/`.
 
 ## Read Map
 
-- Plugin usage and local installation: `README.md`
 - Planning rules and templates: `docs/plans/`
 - Repo-wide engineering rules: `docs/core/`
-- Shipped harness template: `assets/harness-template/`
-- Skill prompts and conflict policy: `references/`
-- Tests and helper implementations: `tests/`, `shared/`, `scripts/`
+- Architecture and boundaries: `docs/architecture/`
+- Behavior contracts and journeys: `docs/specs/`
+- Testing, observability, reliability, security: `docs/quality/`
+- Operations, incidents, runbooks: `docs/operations/`
+- Stack-specific guidance: `docs/playbooks/`
+- Cross-cutting decisions: `docs/decisions/`
+- External references: `docs/references/`
+- Generated artifacts: `docs/generated/`
 
 ## Where Knowledge Lives
 
 - Put a rule in `AGENTS.md` only if it changes how the agent should approach
   most tasks in the repository.
-- Put plugin-maintainer workflow detail in `docs/core/`.
-- Put shipped user-project workflow and templates in `assets/harness-template/`.
-- Put skill prompting defaults and merge policy in `references/`.
-- Put helper logic in `shared/` and thin CLIs in `scripts/`.
-- Put transient work notes in the active/completed plan unless they become
-  durable guidance or deferred debt.
+- Put repo-wide detail in `docs/core/`.
+- Put system structure, layering, and dependency rules in `docs/architecture/`.
+- Put user-visible or system-visible behavior in `docs/specs/`.
+- Put testing, observability, reliability, and security practices in
+  `docs/quality/`.
+- Put incident reports, runbooks, and recovery procedures in
+  `docs/operations/`.
+- Put stack-specific patterns in `docs/playbooks/`.
+- Put durable decisions with tradeoffs in `docs/decisions/`.
+- Put transient work notes in the active/completed plan or incident report
+  unless they become durable guidance or deferred debt.
 
 ## Per-Change Workflow
 
@@ -68,15 +78,14 @@ Put detailed maintenance knowledge under `docs/`.
 3. Create the plan file in `docs/plans/active/`.
 4. Record the change description, expected behavior, hypotheses, and validation
    approach.
-5. Write failing tests for observable behavior before code when helper or skill
+5. Write failing tests for observable behavior before code when executable
    behavior is changing.
 6. Implement the smallest root-cause fix that satisfies the plan.
-7. Update the shipped template and maintainer docs together when defaults move.
+7. Add or improve observability if the change affects diagnosis or operations.
 8. Run the relevant automated checks and direct behavior validation.
-9. Promote durable findings into `AGENTS.md`, `docs/`, `references/`, or
-   `assets/harness-template/` as appropriate.
+9. Promote durable findings into `AGENTS.md` or the right doc under `docs/`.
 10. Finish the plan, capture outcomes and follow-ups, then move it to
-   `docs/plans/completed/`.
+    `docs/plans/completed/`.
 
 ## Quality Bar
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Adopt Harness"
+  short_description: "Add the harness to an existing repository safely."
+  default_prompt: "Use $adopt-harness to add the harness workflow to this existing repository."
+
+policy:
+  allow_implicit_invocation: false

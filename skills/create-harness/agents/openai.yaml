@@ -1,0 +1,7 @@
+interface:
+  display_name: "Create Harness"
+  short_description: "Bootstrap a new repo with the harness scaffold."
+  default_prompt: "Use $create-harness to scaffold a new repository from this product brief."
+
+policy:
+  allow_implicit_invocation: false
