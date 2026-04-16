@@ -27,6 +27,17 @@ Plugins` at [`./.agents/plugins/marketplace.json`](./.agents/plugins/marketplace
 That entry points back to the repository root so the plugin can be tested from
 this checkout.
 
+To install the plugin into a local Codex home, run:
+
+```bash
+bash scripts/install_plugin.sh
+```
+
+The script copies the current repository into `~/.codex/plugins/your-harness`
+without `.git` and common cache directories, then creates or updates
+`~/.codex/plugins/marketplace.json` by replacing only the `your-harness` entry
+from the repo-local marketplace file.
+
 Skill helpers are simple Python CLIs:
 
 ```bash
