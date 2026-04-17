@@ -1,0 +1,7 @@
+interface:
+  display_name: "Plan Small Change"
+  short_description: "Draft a small change plan, ask for approval, then stop."
+  default_prompt: "Use $plan-small-change to inspect this small functionality request, draft a concise plan in chat, ask for approval, and do not implement it yet."
+
+policy:
+  allow_implicit_invocation: true

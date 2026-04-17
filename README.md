@@ -4,12 +4,16 @@
 engineering workflow around saved plans, behavior-first validation, root-cause
 fixes, and long-lived docs.
 
-It ships two explicit-use skills:
+It ships four skills:
 
 - `create-harness`: bootstrap the harness into an empty repository from a short
   product brief
 - `adopt-harness`: add the harness to an existing repository without
   overwriting existing files
+- `plan-small-change`: draft a concise approval plan for a small functionality
+  change without implementing it yet; implicit invocation allowed
+- `plan-medium-large-change`: save a fuller approval plan for a larger
+  functionality change without implementing it yet; implicit invocation allowed
 
 ## Repo Layout
 

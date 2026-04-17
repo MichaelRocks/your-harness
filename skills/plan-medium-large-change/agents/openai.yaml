@@ -1,0 +1,7 @@
+interface:
+  display_name: "Plan Medium Or Large Change"
+  short_description: "Save a larger change plan, ask for approval, then stop."
+  default_prompt: "Use $plan-medium-large-change to inspect this functionality request, save a detailed change plan, ask for approval, and do not implement it yet."
+
+policy:
+  allow_implicit_invocation: true

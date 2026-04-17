@@ -18,6 +18,12 @@ This repository uses the `your-harness` workflow scaffold:
 - changes start with a saved plan under `docs/plans/active/`
 - executable behavior changes start with a failing test
 - durable guidance gets promoted into the right long-lived doc before closure
+- functionality changes should start with the right planning skill before
+  implementation:
+  - use `$plan-small-change` for small, contained requests that only need a
+    brief approval plan in chat
+  - use `$plan-medium-large-change` for medium or large requests that need a
+    saved plan file before coding
 
 ## Start Here
 

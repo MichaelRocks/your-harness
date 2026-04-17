@@ -10,6 +10,14 @@ This is the required change loop for repository work.
 
 ## 2. Save a Plan Before Code
 
+- For functionality changes, start with the right planning step:
+  - Use `$plan-small-change` to explore and draft a brief approval plan in
+    chat when the work is small and contained. If implementation is approved,
+    still record the change in `docs/plans/active/` before editing tracked
+    files.
+  - Use `$plan-medium-large-change` when the work is cross-cutting, risky, or
+    likely to take multiple iterations. That skill should save the plan file
+    before any implementation begins.
 - Create `docs/plans/active/YYYY-MM-DD-short-slug.md` before editing tracked
   files.
 - Use `docs/plans/lightweight-template.md` for small, contained changes.

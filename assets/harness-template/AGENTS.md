@@ -16,6 +16,12 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
    - Operations/incident response: `docs/operations/index.md`
 4. If the task changes architecture, behavior contracts, testing strategy, or
    reliability/security posture, read the matching docs in `docs/`.
+5. If the task adds or changes functionality, choose the planning skill before
+   implementation:
+   - `$plan-small-change` for small, contained work that only needs a brief
+     approval plan in chat
+   - `$plan-medium-large-change` for medium/large work that should save a plan
+     file before coding
 
 ## Non-Negotiables
 
