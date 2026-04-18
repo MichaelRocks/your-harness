@@ -16,21 +16,32 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
    - Operations/incident response: `docs/operations/index.md`
 4. If the task changes architecture, behavior contracts, testing strategy, or
    reliability/security posture, read the matching docs in `docs/`.
-5. If the task adds or changes functionality, choose the planning skill before
+5. If the task adds or changes functionality, categorize it before
    implementation:
-   - `$plan-small-change` for small, contained work that only needs a brief
-     approval plan in chat
-   - `$plan-medium-large-change` for medium/large work that should save a plan
-     file before coding
+   - Small: a brief plan in chat, approval, then implementation
+   - Medium: one saved plan file, approval, then implementation
+   - Large: an overview plus one file per phase, approval, then phased
+     implementation unless the whole plan is explicitly approved
 
 ## Non-Negotiables
 
-- Save a change plan before code. Create a file in
-  `docs/plans/active/YYYY-MM-DD-short-slug.md`.
-- Use `docs/plans/lightweight-template.md` for small changes. Use
-  `docs/plans/PLANS.md` for multi-step, risky, or multi-hour work.
+- Categorize functionality changes as small, medium, or large before
+  implementation.
+- Small changes start with a short plan in chat, then wait for approval before
+  implementation.
+- Medium changes save one plan file in
+  `docs/plans/active/YYYY-MM-DD-short-slug.md`, then wait for approval before
+  implementation.
+- Large changes save a plan folder in
+  `docs/plans/active/YYYY-MM-DD-short-slug/` with `overview.md` plus one file
+  per phase, then wait for approval before implementation.
+- Ask clarifying questions whenever a plan still has unclear requirements,
+  constraints, success criteria, or sequencing.
+- Unless the user explicitly approves the whole large change end to end, pause
+  after each phase and ask for permission before continuing.
 - Incident reports live in `docs/operations/incidents/`, but they do not
-  replace the required change plan when tracked files change.
+  replace the normal small/medium/large change-planning workflow when tracked
+  files change.
 - Keep the plan live while working. Record progress, hypotheses, findings,
   decisions, and validation results as they happen.
 - Write tests before implementation when changing executable behavior. Start
@@ -45,8 +56,8 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
 - Keep designs boring in the positive sense: legible, inspectable, and easy to
   maintain. Avoid needless abstraction and cleverness.
 - Promote durable knowledge to the right docs before closing the change.
-- When the change is complete, move the plan file to `docs/plans/completed/`
-  and capture outcomes plus follow-up debt.
+- When the change is complete, move any saved plan file or plan folder to
+  `docs/plans/completed/` and capture outcomes plus follow-up debt.
 
 ## Read Map
 
@@ -81,16 +92,19 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
 
 1. Read `docs/index.md` and the relevant detailed docs.
 2. Explore the current system before proposing edits.
-3. Create the plan file in `docs/plans/active/`.
-4. Record the change description, expected behavior, hypotheses, and validation
+3. Categorize the change as small, medium, or large.
+4. Ask clarifying questions before finalizing the plan when key details are
+   still unclear.
+5. Create any required saved plan file or plan folder in `docs/plans/active/`.
+6. Record the change description, expected behavior, hypotheses, and validation
    approach.
-5. Write failing tests for observable behavior before code when executable
+7. Write failing tests for observable behavior before code when executable
    behavior is changing.
-6. Implement the smallest root-cause fix that satisfies the plan.
-7. Add or improve observability if the change affects diagnosis or operations.
-8. Run the relevant automated checks and direct behavior validation.
-9. Promote durable findings into `AGENTS.md` or the right doc under `docs/`.
-10. Finish the plan, capture outcomes and follow-ups, then move it to
+8. Implement the smallest root-cause fix that satisfies the approved plan.
+9. Add or improve observability if the change affects diagnosis or operations.
+10. Run the relevant automated checks and direct behavior validation.
+11. Promote durable findings into `AGENTS.md` or the right doc under `docs/`.
+12. Finish any saved plan, capture outcomes and follow-ups, then move it to
     `docs/plans/completed/`.
 
 ## Quality Bar

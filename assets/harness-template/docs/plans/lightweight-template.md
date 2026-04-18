@@ -1,13 +1,17 @@
 # Lightweight Plan Template
 
-Use this template for small, contained, low-risk changes. The plan still must
-exist before code starts.
+Use this template for medium changes: work that is larger than a quick
+chat-planned small change but does not need a phased large-change plan set.
 
 ## File Placement
 
 - Create the file in `docs/plans/active/`.
 - Use the naming scheme `YYYY-MM-DD-short-slug.md`.
 - Move it to `docs/plans/completed/` when done.
+
+Small changes start with an approved plan in chat and do not use this file
+template. Large changes use `docs/plans/PLANS.md` and save an overview plus
+one file per phase.
 
 ## Template
 
@@ -45,4 +49,4 @@ One paragraph describing the problem, scope, and intended outcome.
 ## When To Escalate To a Full ExecPlan
 
 Switch to `docs/plans/PLANS.md` if the change becomes cross-cutting, risky,
-hard to estimate, or likely to take multiple iterations.
+hard to estimate, or needs explicit phases instead of one saved plan file.

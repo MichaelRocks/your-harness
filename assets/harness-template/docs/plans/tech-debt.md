@@ -9,6 +9,7 @@ but intentionally left out of the current change or mitigation.
 ### Short title
 
 - Source: `docs/plans/completed/YYYY-MM-DD-short-slug.md` or
+  `docs/plans/completed/YYYY-MM-DD-short-slug/overview.md` or
   `docs/operations/incidents/completed/YYYY-MM-DDTHH-MM-SSZ-short-slug.md`
 - Area:
 - Problem:

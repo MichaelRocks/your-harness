@@ -1,26 +1,31 @@
-# Full ExecPlan Template
+# Large Change Plan Set
 
-Use this format for any change that is multi-step, risky, cross-cutting, or
-likely to take more than a short focused session.
+Use this format for large changes: work that is cross-cutting, risky,
+multi-phase, or important enough to warrant explicit phase boundaries and
+phase-by-phase approval.
 
-An ExecPlan is a living implementation document. A different engineer or agent
-should be able to resume the work using only the plan plus the repository
-state. Update it while working, not just at the end.
+Large changes use a folder-based plan set. A different engineer or agent
+should be able to resume the work using only the saved plan folder plus the
+repository state. Update the overview and phase files while working, not just
+at the end.
 
 ## File Placement
 
-- Create the file in `docs/plans/active/` before editing tracked files.
-- Use the naming scheme `YYYY-MM-DD-short-slug.md`.
-- Move the file to `docs/plans/completed/` when the change is finished.
+- Create a folder in `docs/plans/active/YYYY-MM-DD-short-slug/` before editing
+  tracked files.
+- Save `overview.md` in that folder.
+- Save one file per phase, such as `phase-01-foundation.md`,
+  `phase-02-migration.md`, and `phase-03-rollout.md`.
+- Move the entire folder to `docs/plans/completed/` when the change is
+  finished.
 
-## Required Sections
+## `overview.md` Required Sections
 
 ```md
 # Short change title
 
-This ExecPlan is a living document. Keep `Progress`,
-`Surprises & Discoveries`, `Decision Log`, and
-`Outcomes & Retrospective` current as work proceeds.
+This overview is a living document. Keep the phase sequence,
+cross-phase decisions, and overall outcomes current as work proceeds.
 
 ## Purpose / Big Picture
 
@@ -35,13 +40,57 @@ important operational or product limits.
 ## Context and Orientation
 
 Describe the relevant current-state facts, files, components, and runtime
-behavior someone would need before making changes.
+behavior someone would need before starting any phase.
 
-## Hypotheses / Open Questions
+## Clarifications Needed
 
-- Hypothesis:
+- Open question:
   Why it matters:
-  How it will be tested or disproved:
+  How it will be resolved:
+
+## Phase Sequence
+
+1. `phase-01-short-name.md` — what this phase achieves
+2. `phase-02-short-name.md` — what this phase achieves
+
+## Cross-Phase Validation
+
+- Automated checks:
+- Real behavior validation:
+- Observability reviewed or added:
+
+## Decision Log
+
+- Decision:
+  Rationale:
+  Date/Author:
+
+## Outcomes & Retrospective
+
+Summarize the final result, unresolved risks, follow-up debt, and what future
+changes should learn from this work.
+```
+
+## Phase File Required Sections
+
+```md
+# Phase N: Short title
+
+## Goal
+
+What this phase must accomplish before the next phase can begin.
+
+## Scope and Dependencies
+
+- In scope:
+- Out of scope:
+- Dependencies or prerequisites:
+
+## Clarifications Needed
+
+- Open question:
+  Why it matters:
+  How it will be resolved:
 
 ## Plan of Work
 
@@ -59,32 +108,21 @@ behavior someone would need before making changes.
   Evidence:
   Impact:
 
-## Decision Log
-
-- Decision:
-  Rationale:
-  Date/Author:
-
 ## Validation
 
 - Automated checks:
 - Real behavior validation:
 - Observability reviewed or added:
 
-## Knowledge To Promote
+## Completion Notes
 
-- Docs to update if the work changes future defaults or guidance.
-
-## Outcomes & Retrospective
-
-Summarize the final result, unresolved risks, follow-up debt, and what future
-changes should learn from this work.
+Summarize the phase outcome, remaining risks, and whether the next phase is
+ready to start.
 ```
 
-## Quality Bar For Good ExecPlans
+## Quality Bar For Large Plan Sets
 
 - Self-contained: the reader should not need hidden context from chat history.
-- Executable: steps should be concrete enough to follow directly.
-- Truth-seeking: surprises and disproved hypotheses stay in the plan.
-- Validation-oriented: success is tied to observable behavior, not only code
-  structure.
+- Executable: overview and phase files should be concrete enough to follow.
+- Truth-seeking: surprises and disproved assumptions stay in the saved plan.
+- Phase-aware: each phase should have a clear boundary and completion signal.

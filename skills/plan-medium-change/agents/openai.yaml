@@ -1,0 +1,7 @@
+interface:
+  display_name: "Plan Medium Change"
+  short_description: "Clarify, save a plan, and implement a medium change."
+  default_prompt: "Use $plan-medium-change to inspect this medium functionality request, ask clarifying questions if needed, save one plan file, get approval, and implement the approved change."
+
+policy:
+  allow_implicit_invocation: true

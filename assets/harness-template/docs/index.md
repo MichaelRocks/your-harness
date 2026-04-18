@@ -15,8 +15,9 @@ should stay short and route readers here.
 
 | Task | Read first |
 | --- | --- |
-| Planning any change | `docs/plans/lightweight-template.md` or `docs/plans/PLANS.md` |
-| Adding or changing functionality | `docs/core/workflow.md`, then use `$plan-small-change` for small work or `$plan-medium-large-change` for medium/large work |
+| Categorizing a functionality change | `docs/core/workflow.md` |
+| Writing a medium change plan | `docs/plans/lightweight-template.md` |
+| Writing a large phased plan | `docs/plans/PLANS.md` |
 | Understanding the work loop | `docs/core/workflow.md` |
 | Deciding where knowledge belongs | `docs/core/knowledge-management.md` |
 | Changing system boundaries | `docs/architecture/index.md` |

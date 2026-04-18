@@ -8,26 +8,27 @@ This is the required change loop for repository work.
 - Explore the existing system first. Build a concrete picture of the current
   behavior, boundaries, and failure mode before proposing changes.
 
-## 2. Save a Plan Before Code
+## 2. Categorize and Plan Before Code
 
-- For functionality changes, start with the right planning step:
-  - Use `$plan-small-change` to explore and draft a brief approval plan in
-    chat when the work is small and contained. If implementation is approved,
-    still record the change in `docs/plans/active/` before editing tracked
-    files.
-  - Use `$plan-medium-large-change` when the work is cross-cutting, risky, or
-    likely to take multiple iterations. That skill should save the plan file
-    before any implementation begins.
-- Create `docs/plans/active/YYYY-MM-DD-short-slug.md` before editing tracked
-  files.
-- Use `docs/plans/lightweight-template.md` for small, contained changes.
-- Use `docs/plans/PLANS.md` for multi-step, risky, or multi-hour work.
+- For functionality changes, classify the work before implementation:
+  - Small: draft a short plan in chat, ask clarifying questions if needed, get
+    approval, then implement.
+  - Medium: save one plan file in
+    `docs/plans/active/YYYY-MM-DD-short-slug.md`, ask clarifying questions if
+    needed, get approval, then implement.
+  - Large: save a plan folder in `docs/plans/active/YYYY-MM-DD-short-slug/`
+    with `overview.md` plus one file per phase, ask clarifying questions if
+    needed, get approval, then implement phase by phase unless the whole plan
+    is explicitly approved.
+- Use `docs/plans/lightweight-template.md` for medium changes.
+- Use `docs/plans/PLANS.md` for large phased changes.
 - Capture the change description, expected observable behavior, hypotheses,
-  validation plan, and intended observability changes.
+  validation plan, and intended observability changes in any saved plan files.
 - Incident reports belong in `docs/operations/incidents/` and capture live
   operational response notes.
 - If incident mitigation changes tracked files, still create or update a normal
-  change plan in `docs/plans/active/`. Incident reports do not replace plans.
+  change plan using the same small/medium/large categorization. Incident
+  reports do not replace that workflow.
 
 ## 3. Write Failing Tests First
 
@@ -71,6 +72,7 @@ intended workflow.
 
 ## 8. Close the Loop
 
-- Update the plan with outcomes, surprises, decisions, and follow-ups.
-- Move the plan from `docs/plans/active/` to `docs/plans/completed/`.
+- Update any saved plan with outcomes, surprises, decisions, and follow-ups.
+- Move any saved plan file or plan folder from `docs/plans/active/` to
+  `docs/plans/completed/`.
 - Leave the repository easier to understand and operate.

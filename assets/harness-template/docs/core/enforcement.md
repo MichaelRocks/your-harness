@@ -7,12 +7,16 @@ ship runnable CI jobs or repository scripts for these checks.
 
 ### Planning Discipline
 
-- Fail when tracked source changes are made without a new or updated plan file
-  in `docs/plans/active/` or `docs/plans/completed/`.
-- Fail when a plan file is missing required sections for hypotheses, validation,
-  and outcomes.
-- Warn or fail when large changes use the lightweight plan instead of the full
-  ExecPlan format.
+- Small-change chat plans are conversational and are not directly enforceable
+  from repository files.
+- Fail when a medium change saves no plan file in `docs/plans/active/` or
+  `docs/plans/completed/`.
+- Fail when a large change saves no plan folder with `overview.md` plus phase
+  files in `docs/plans/active/` or `docs/plans/completed/`.
+- Fail when a saved medium or large plan is missing required validation and
+  outcome sections.
+- Warn or fail when a large change collapses into one lightweight plan file
+  instead of a phased plan set.
 
 ### Documentation Integrity
 
