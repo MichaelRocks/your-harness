@@ -1,6 +1,6 @@
 {
   "name": "your-harness",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bootstrap or adopt a durable harness workflow in local repositories.",
   "author": {
     "name": "Michael Rozumyanskiy",

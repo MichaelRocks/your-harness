@@ -9,6 +9,7 @@ TARGET_PLUGINS_DIR="${CODEX_HOME_DIR}/plugins"
 TARGET_PLUGIN_DIR="${TARGET_PLUGINS_DIR}/${PLUGIN_NAME}"
 TARGET_MARKETPLACE_PATH="${TARGET_PLUGINS_DIR}/marketplace.json"
 REPO_MARKETPLACE_PATH="${REPO_ROOT}/.agents/plugins/marketplace.json"
+CACHE_ROOT="${TARGET_PLUGINS_DIR}/cache"
 
 mkdir -p "${TARGET_PLUGINS_DIR}"
 
@@ -20,6 +21,15 @@ rsync -a --delete \
   --exclude ".ruff_cache/" \
   --exclude ".DS_Store" \
   "${REPO_ROOT}/" "${TARGET_PLUGIN_DIR}/"
+
+if [ -d "${CACHE_ROOT}" ]; then
+  while IFS= read -r cache_dir; do
+    rm -rf "${cache_dir}"
+    printf 'Cleared plugin cache: %s\n' "${cache_dir}"
+  done < <(
+    find "${CACHE_ROOT}" -mindepth 2 -maxdepth 2 -type d -name "${PLUGIN_NAME}" | sort
+  )
+fi
 
 REPO_MARKETPLACE_PATH="${REPO_MARKETPLACE_PATH}" \
 TARGET_MARKETPLACE_PATH="${TARGET_MARKETPLACE_PATH}" \

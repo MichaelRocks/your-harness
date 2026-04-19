@@ -94,6 +94,28 @@ class InstallPluginScriptTests(unittest.TestCase):
             self.assertEqual("ON_INSTALL", your_harness["policy"]["authentication"])
             self.assertEqual("Coding", your_harness["category"])
 
+    def test_clears_cached_plugin_bundle_for_your_harness(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            codex_home = Path(tmp) / ".codex"
+            stale_cache_dir = (
+                codex_home
+                / "plugins"
+                / "cache"
+                / "michaelrocks-plugins"
+                / "your-harness"
+                / "0.0.0"
+            )
+            stale_cache_dir.mkdir(parents=True, exist_ok=True)
+            (stale_cache_dir / "README.md").write_text("stale cache\n")
+
+            result = self.run_script(codex_home)
+
+            self.assertEqual(0, result.returncode, msg=result.stderr)
+            self.assertFalse(
+                stale_cache_dir.exists(),
+                msg="install should remove stale cached plugin bundles",
+            )
+
 
 if __name__ == "__main__":
     unittest.main()
