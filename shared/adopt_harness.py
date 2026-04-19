@@ -92,11 +92,21 @@ def adopt_harness(options: AdoptHarnessOptions) -> AdoptHarnessResult:
             f"Introduce the your-harness workflow additively in {project_name}. "
             f"Project context: {product_description}"
         ),
+        planned_changes=[
+            "Copy missing harness-owned files into the repository without overwriting already-present project files.",
+            "Rewrite template-owned docs under `docs/` toward the harness defaults while leaving non-doc conflicts untouched for manual resolution.",
+            "Surface copied, refactored, matching, and conflicting paths clearly so the project can finish any manual integration work deliberately.",
+        ],
         expected_behavior=[
             "Missing harness docs and templates are added without overwriting existing files.",
             "Template-owned docs are rewritten toward the harness defaults.",
             "Non-doc conflicts remain unchanged and are surfaced for manual resolution.",
             "A live change plan exists before the adoption file updates.",
+        ],
+        tasks=[
+            "Copy missing harness files without overwriting non-conflicting project files.",
+            "Rewrite template-owned docs toward the harness defaults and preserve non-doc conflicts for manual resolution.",
+            "Review the adoption summary and run repo-specific follow-up checks after applying the scaffold.",
         ],
         hypotheses=[
             "The project already has code or docs that should be preserved.",

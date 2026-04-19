@@ -18,9 +18,10 @@ state. Update it while working, not just at the end.
 ```md
 # Short change title
 
-This ExecPlan is a living document. Keep `Progress`,
-`Surprises & Discoveries`, `Decision Log`, and
-`Outcomes & Retrospective` current as work proceeds.
+This ExecPlan is a living document. Keep `Task Checklist`,
+`Surprises & Discoveries`, `Decision Log`, and `Outcomes & Retrospective`
+current as work proceeds. Mark each task as `[x]` immediately after
+completion.
 
 ## Purpose / Big Picture
 
@@ -37,21 +38,26 @@ important operational or product limits.
 Describe the relevant current-state facts, files, components, and runtime
 behavior someone would need before making changes.
 
+## Planned Changes
+
+Use this section for a quick summary of the intended edits.
+
+- High-level files, components, interfaces, docs, or workflows that will
+  change
+- Important non-goals, unchanged areas, or rollout limits
+- Short notes on how the change will reshape the current system
+
 ## Hypotheses / Open Questions
 
 - Hypothesis:
   Why it matters:
   How it will be tested or disproved:
 
-## Plan of Work
+## Task Checklist
 
-1. Concrete implementation step.
-2. Concrete validation or migration step.
-3. Concrete documentation or follow-up step.
-
-## Progress
-
-- [ ] Timestamped checkpoint for meaningful work items.
+- [ ] Concrete implementation task.
+- [ ] Concrete validation or migration task.
+- [ ] Concrete documentation or follow-up task.
 
 ## Surprises & Discoveries
 
@@ -84,7 +90,11 @@ changes should learn from this work.
 ## Quality Bar For Good ExecPlans
 
 - Self-contained: the reader should not need hidden context from chat history.
-- Executable: steps should be concrete enough to follow directly.
+- Executable: tasks should be concrete enough to follow directly.
 - Truth-seeking: surprises and disproved hypotheses stay in the plan.
 - Validation-oriented: success is tied to observable behavior, not only code
   structure.
+- Task-driven: completed work is reflected immediately by updating the saved
+  checklist.
+- Skimmable: `Planned Changes` should orient the reader quickly without
+  duplicating the task checklist.

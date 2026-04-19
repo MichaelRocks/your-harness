@@ -24,8 +24,12 @@ Put detailed maintenance knowledge under `docs/`.
 - Keep the shipped scaffold canonical in `assets/harness-template/`. Do not
   treat the repo root docs as the source copied into user projects.
 - Keep skills, helper scripts, and template docs aligned when behavior changes.
+- Every saved plan must include a concise planned-change summary and an
+  explicit task checklist. Large-change roadmaps still need explicit tasks,
+  not just phase names.
 - Keep the plan live while working. Record progress, hypotheses, findings,
-  decisions, and validation results as they happen.
+  decisions, and validation results as they happen, and mark each completed
+  task done as soon as it is finished.
 - Write tests before implementation when changing executable behavior. Start
   with a failing test that exercises observable system behavior.
 - Validate the real behavior of the system, not only internal invariants.
@@ -67,7 +71,7 @@ Put detailed maintenance knowledge under `docs/`.
 2. Explore the current system before proposing edits.
 3. Create the plan file in `docs/plans/active/`.
 4. Record the change description, expected behavior, hypotheses, and validation
-   approach.
+   approach, plus a concise planned-change summary and explicit tasks.
 5. Write failing tests for observable behavior before code when helper or skill
    behavior is changing.
 6. Implement the smallest root-cause fix that satisfies the plan.

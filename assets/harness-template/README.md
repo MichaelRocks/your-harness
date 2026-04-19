@@ -18,12 +18,17 @@ This repository uses the `your-harness` workflow scaffold:
 - executable behavior changes start with a failing test
 - durable guidance gets promoted into the right long-lived doc before closure
 - functionality changes are categorized before implementation:
-  - small: plan briefly in chat, wait for approval, then implement
-  - medium: save one plan file, wait for approval, then implement
-  - large: save an overview plus one file per phase, wait for approval, then
+  - small: plan briefly in chat with explicit tasks, wait for approval, then
+    implement
+  - medium: save one plan file with a concise planned-change summary and
+    explicit tasks, wait for approval, then implement
+  - large: save an overview plus one file per phase, all with concise
+    planned-change summaries and explicit tasks; wait for approval, then
     implement phase by phase unless the whole plan is explicitly approved
 - ask clarifying questions whenever the plan still has unclear requirements,
   constraints, success criteria, or sequencing
+- keep saved task checklists current and mark each task done as soon as it is
+  completed
 
 ## Start Here
 

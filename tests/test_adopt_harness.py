@@ -73,6 +73,15 @@ class AdoptHarnessTests(unittest.TestCase):
             self.assertIn("AGENTS.md", result.conflicts)
             self.assertNotEqual("# Legacy index\n", (target / "docs" / "index.md").read_text())
             self.assertEqual("# Existing agents\n", (target / "AGENTS.md").read_text())
+            plan_text = result.plan_path.read_text()
+            self.assertIn("## Planned Changes", plan_text)
+            self.assertIn("## Task Checklist", plan_text)
+            self.assertNotIn("## Progress", plan_text)
+            self.assertIn("Use this section for a quick summary of the intended edits.", plan_text)
+            self.assertIn(
+                "- [ ] Copy missing harness files without overwriting non-conflicting project files.",
+                plan_text,
+            )
 
 
 if __name__ == "__main__":

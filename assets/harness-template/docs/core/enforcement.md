@@ -13,10 +13,12 @@ ship runnable CI jobs or repository scripts for these checks.
   `docs/plans/completed/`.
 - Fail when a large change saves no plan folder with `overview.md` plus phase
   files in `docs/plans/active/` or `docs/plans/completed/`.
-- Fail when a saved medium or large plan is missing required validation and
-  outcome sections.
+- Fail when a saved medium or large plan is missing required planned-change,
+  explicit-task, validation, or outcome sections.
 - Warn or fail when a large change collapses into one lightweight plan file
   instead of a phased plan set.
+- Warn or fail when completion state is recorded elsewhere but saved task
+  checklists are not kept in sync.
 
 ### Documentation Integrity
 

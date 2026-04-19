@@ -16,8 +16,8 @@ should stay short and route readers here.
 | Task | Read first |
 | --- | --- |
 | Categorizing a functionality change | `docs/core/workflow.md` |
-| Writing a medium change plan | `docs/plans/lightweight-template.md` |
-| Writing a large phased plan | `docs/plans/PLANS.md` |
+| Writing a detailed medium change plan | `docs/plans/lightweight-template.md` |
+| Writing a detailed large phased plan | `docs/plans/PLANS.md` |
 | Understanding the work loop | `docs/core/workflow.md` |
 | Deciding where knowledge belongs | `docs/core/knowledge-management.md` |
 | Changing system boundaries | `docs/architecture/index.md` |
@@ -55,7 +55,8 @@ should stay short and route readers here.
 
 - Keep durable guidance in `docs/`, not in ad hoc chat history.
 - Keep transient work notes in the change plan or incident report until they
-  become durable.
+  become durable, and keep saved task checklists current while work is in
+  progress.
 - Use repo-relative paths, environment variables, or placeholders in docs
   instead of machine-specific absolute filesystem paths.
 - Favor cross-links over duplication.

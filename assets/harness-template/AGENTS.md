@@ -18,9 +18,11 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
    reliability/security posture, read the matching docs in `docs/`.
 5. If the task adds or changes functionality, categorize it before
    implementation:
-   - Small: a brief plan in chat, approval, then implementation
-   - Medium: one saved plan file, approval, then implementation
-   - Large: an overview plus one file per phase, approval, then phased
+   - Small: a brief task-based plan in chat, approval, then implementation
+   - Medium: one saved plan file with a concise planned-change summary and
+     explicit tasks, approval, then implementation
+   - Large: an overview plus one file per phase, all with concise
+     planned-change summaries and explicit tasks, approval, then phased
      implementation unless the whole plan is explicitly approved
 
 ## Non-Negotiables
@@ -30,11 +32,13 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
 - Small changes start with a short plan in chat, then wait for approval before
   implementation.
 - Medium changes save one plan file in
-  `docs/plans/active/YYYY-MM-DD-short-slug.md`, then wait for approval before
+  `docs/plans/active/YYYY-MM-DD-short-slug.md` with a concise planned-change
+  summary and an explicit task checklist, then wait for approval before
   implementation.
 - Large changes save a plan folder in
   `docs/plans/active/YYYY-MM-DD-short-slug/` with `overview.md` plus one file
-  per phase, then wait for approval before implementation.
+  per phase. The overview is a task-based roadmap and each phase file has its
+  own explicit task checklist. Wait for approval before implementation.
 - Ask clarifying questions whenever a plan still has unclear requirements,
   constraints, success criteria, or sequencing.
 - Unless the user explicitly approves the whole large change end to end, pause
@@ -43,7 +47,8 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
   replace the normal small/medium/large change-planning workflow when tracked
   files change.
 - Keep the plan live while working. Record progress, hypotheses, findings,
-  decisions, and validation results as they happen.
+  decisions, and validation results as they happen. Mark each completed task
+  as done in the saved plan as soon as it finishes.
 - Write tests before implementation when changing executable behavior. Start
   with a failing test that exercises observable system behavior.
 - Validate the real behavior of the system, not only internal invariants.
@@ -96,8 +101,8 @@ non-negotiable operating rules. Put detailed, durable knowledge under `docs/`.
 4. Ask clarifying questions before finalizing the plan when key details are
    still unclear.
 5. Create any required saved plan file or plan folder in `docs/plans/active/`.
-6. Record the change description, expected behavior, hypotheses, and validation
-   approach.
+6. Record the change description, concise planned changes, explicit tasks,
+   expected behavior, hypotheses, and validation approach.
 7. Write failing tests for observable behavior before code when executable
    behavior is changing.
 8. Implement the smallest root-cause fix that satisfies the approved plan.

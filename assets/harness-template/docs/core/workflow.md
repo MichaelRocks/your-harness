@@ -22,8 +22,16 @@ This is the required change loop for repository work.
     is explicitly approved.
 - Use `docs/plans/lightweight-template.md` for medium changes.
 - Use `docs/plans/PLANS.md` for large phased changes.
-- Capture the change description, expected observable behavior, hypotheses,
-  validation plan, and intended observability changes in any saved plan files.
+- Capture the change description, a concise planned-change summary, explicit
+  tasks, expected observable behavior, hypotheses, validation plan, and
+  intended observability changes in any saved plan files.
+- Every saved medium or large plan must contain an explicit task checklist. For
+  large changes, the overview is a task-based roadmap, not just a list of
+  phase names.
+- Keep detailed execution steps in the task checklist rather than duplicating
+  them in the planned-change summary.
+- Mark each saved-plan task as done as soon as the underlying work is
+  completed.
 - Incident reports belong in `docs/operations/incidents/` and capture live
   operational response notes.
 - If incident mitigation changes tracked files, still create or update a normal

@@ -72,10 +72,20 @@ def create_harness(options: CreateHarnessOptions) -> CreateHarnessResult:
             f"Initialize {options.project_name} with the your-harness scaffold. "
             f"Product description: {options.product_description}"
         ),
+        planned_changes=[
+            "Copy the canonical harness scaffold into the repository with project-specific replacements in the root docs and templates.",
+            "Seed the repository with routing docs, planning templates, quality guidance, and operations/reference directories that future tracked changes will use.",
+            "Limit this bootstrap to workflow scaffolding and initial project framing rather than adding product-specific executable code.",
+        ],
         expected_behavior=[
             "The repository contains the harness routing docs and templates.",
             "The project README captures the initial product framing.",
             "A live plan exists before follow-on tracked changes.",
+        ],
+        tasks=[
+            "Copy the scaffold files into the repository.",
+            "Verify the generated README and AGENTS routing reflect the provided project context.",
+            "Confirm the docs and plan directories exist for follow-on tracked changes.",
         ],
         hypotheses=[
             f"Primary stacks: {', '.join(options.primary_stacks) or 'TBD'}",

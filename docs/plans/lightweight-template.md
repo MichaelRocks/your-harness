@@ -1,7 +1,8 @@
 # Lightweight Plan Template
 
 Use this template for small, contained, low-risk changes. The plan still must
-exist before code starts.
+exist before code starts, and it must be detailed enough that another engineer
+or agent could continue the work without hidden chat context.
 
 ## File Placement
 
@@ -14,13 +15,31 @@ exist before code starts.
 ```md
 # Short change title
 
+This plan is a living document. Keep `Task Checklist` and `Completion Notes`
+current as work proceeds. Mark each task as `[x]` immediately after
+completion.
+
 ## Change Summary
 
 One paragraph describing the problem, scope, and intended outcome.
 
+## Planned Changes
+
+Use this section for a quick summary of the intended edits.
+
+- High-level areas that will change
+- Important non-goals or boundaries for this change
+- Short notes that help a reader understand the shape of the work quickly
+
 ## Expected Behavior
 
 - What should be true after the change from the outside
+
+## Task Checklist
+
+- [ ] Detailed implementation task
+- [ ] Detailed validation task
+- [ ] Detailed documentation or follow-up task
 
 ## Hypotheses / Findings
 
@@ -46,3 +65,9 @@ One paragraph describing the problem, scope, and intended outcome.
 
 Switch to `docs/plans/PLANS.md` if the change becomes cross-cutting, risky,
 hard to estimate, or likely to take multiple iterations.
+
+## Quality Bar
+
+- Keep `Planned Changes` concise and high-level.
+- Make the task checklist explicit enough to execute directly.
+- Update task checkboxes immediately as work completes.

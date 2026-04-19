@@ -9,10 +9,12 @@ ship runnable CI jobs or repository scripts for these checks.
 
 - Fail when tracked source changes are made without a new or updated plan file
   in `docs/plans/active/` or `docs/plans/completed/`.
-- Fail when a plan file is missing required sections for hypotheses, validation,
-  and outcomes.
+- Fail when a saved plan is missing required sections for planned-change
+  summary, explicit tasks, validation, or outcomes.
 - Warn or fail when large changes use the lightweight plan instead of the full
   ExecPlan format.
+- Warn or fail when completion state is recorded elsewhere but the saved task
+  checklist is not kept in sync.
 
 ### Documentation Integrity
 

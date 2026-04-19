@@ -34,6 +34,8 @@ phase. Use `$plan-small-change` or `$plan-large-change` instead.
 4. Save one plan file in `docs/plans/active/YYYY-MM-DD-short-slug.md`.
 5. Capture at least:
    - change summary
+   - concise planned-change summary
+   - explicit task checklist
    - expected behavior
    - open questions or working assumptions
    - validation approach
@@ -41,6 +43,7 @@ phase. Use `$plan-small-change` or `$plan-large-change` instead.
 6. Present the saved plan to the user and ask for approval.
 7. Once the plan is approved, implement it. Do not ask for a second approval
    step unless the user limits approval to planning only or new ambiguity
-   appears.
+   appears. While implementing, keep the saved plan current and mark each task
+   as `[x]` immediately after it is completed.
 8. If the work expands into a phased effort, pause and switch to
    `$plan-large-change` before continuing.

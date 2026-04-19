@@ -33,6 +33,12 @@ class CreateHarnessTests(unittest.TestCase):
             self.assertTrue((target / "docs" / "plans" / "active").exists())
             self.assertEqual([], result.refused_paths)
             self.assertTrue(result.plan_path.exists())
+            plan_text = result.plan_path.read_text()
+            self.assertIn("## Planned Changes", plan_text)
+            self.assertIn("## Task Checklist", plan_text)
+            self.assertNotIn("## Progress", plan_text)
+            self.assertIn("Use this section for a quick summary of the intended edits.", plan_text)
+            self.assertIn("- [ ] Copy the scaffold files into the repository.", plan_text)
 
     def test_bootstrap_refuses_non_empty_repo(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

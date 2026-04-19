@@ -35,8 +35,10 @@ categories. Use `$plan-small-change` or `$plan-medium-change` instead.
 4. Create a plan folder in `docs/plans/active/YYYY-MM-DD-short-slug/`.
 5. Save:
    - `overview.md` with the big picture, constraints, phase sequence, and
-     cross-phase validation strategy
-   - one phase file per phase, such as `phase-01-foundation.md`
+     cross-phase validation strategy, plus a roadmap task checklist with
+     explicit tasks and a concise planned-change summary
+   - one phase file per phase, such as `phase-01-foundation.md`, each with
+     a concise planned-change summary and an explicit task checklist
 6. Present the plan set to the user and ask for approval.
 7. If the user explicitly approves implementing the whole plan, execute the
    phases in order without additional permission checkpoints unless new
@@ -44,4 +46,5 @@ categories. Use `$plan-small-change` or `$plan-medium-change` instead.
 8. Otherwise, implement one phase at a time and ask for permission before
    continuing to the next phase.
 9. Keep the overview and phase files current as discoveries, decisions, and
-   outcomes evolve.
+   outcomes evolve, and mark each roadmap or phase task as `[x]` immediately
+   after it is completed.

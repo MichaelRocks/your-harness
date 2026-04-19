@@ -17,7 +17,13 @@ its shipped scaffold.
 - Use `docs/plans/lightweight-template.md` for small, contained changes.
 - Use `docs/plans/PLANS.md` for multi-step, risky, or multi-hour work.
 - Capture the change description, expected observable behavior, hypotheses,
-  validation plan, and intended observability changes.
+  validation plan, intended observability changes, a concise planned-change
+  summary, and explicit tasks.
+- Every saved plan must contain a task checklist. For large work, the overview
+  still needs a task-based roadmap instead of phase names alone.
+- Keep detailed execution steps in the task checklist rather than duplicating
+  them in the planned-change summary.
+- Mark each task as done in the saved plan as soon as the work finishes.
 - If the change affects generated user-project content, record whether the
   source of truth is a root maintainer doc or `assets/harness-template/`.
 

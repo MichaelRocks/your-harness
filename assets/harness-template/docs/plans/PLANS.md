@@ -24,8 +24,9 @@ at the end.
 ```md
 # Short change title
 
-This overview is a living document. Keep the phase sequence,
-cross-phase decisions, and overall outcomes current as work proceeds.
+This overview is a living document. Keep the roadmap tasks, phase sequence,
+cross-phase decisions, and overall outcomes current as work proceeds. Mark
+each roadmap task as `[x]` immediately after completion.
 
 ## Purpose / Big Picture
 
@@ -42,6 +43,15 @@ important operational or product limits.
 Describe the relevant current-state facts, files, components, and runtime
 behavior someone would need before starting any phase.
 
+## Planned Changes
+
+Use this section for a quick summary of the intended edits.
+
+- High-level files, components, interfaces, docs, or workflows that will
+  change
+- Important non-goals, unchanged areas, or rollout constraints
+- Short notes on how the full change is expected to reshape the current system
+
 ## Clarifications Needed
 
 - Open question:
@@ -52,6 +62,12 @@ behavior someone would need before starting any phase.
 
 1. `phase-01-short-name.md` — what this phase achieves
 2. `phase-02-short-name.md` — what this phase achieves
+
+## Roadmap Task Checklist
+
+- [ ] Explicit roadmap task tied to a phase deliverable.
+- [ ] Explicit roadmap task tied to a later phase deliverable.
+- [ ] Explicit cross-phase validation, migration, or documentation task.
 
 ## Cross-Phase Validation
 
@@ -92,15 +108,20 @@ What this phase must accomplish before the next phase can begin.
   Why it matters:
   How it will be resolved:
 
-## Plan of Work
+## Planned Changes
 
-1. Concrete implementation step.
-2. Concrete validation or migration step.
-3. Concrete documentation or follow-up step.
+Use this section for a quick summary of the intended edits.
 
-## Progress
+- High-level files, components, interfaces, docs, or workflows that this phase
+  will change
+- Important non-goals or areas deferred to other phases
+- Short notes on how this phase moves the system toward the roadmap goal
 
-- [ ] Timestamped checkpoint for meaningful work items.
+## Task Checklist
+
+- [ ] Concrete implementation task.
+- [ ] Concrete validation or migration task.
+- [ ] Concrete documentation or follow-up task.
 
 ## Surprises & Discoveries
 
@@ -123,6 +144,10 @@ ready to start.
 ## Quality Bar For Large Plan Sets
 
 - Self-contained: the reader should not need hidden context from chat history.
-- Executable: overview and phase files should be concrete enough to follow.
+- Executable: roadmap and phase tasks should be concrete enough to follow.
 - Truth-seeking: surprises and disproved assumptions stay in the saved plan.
 - Phase-aware: each phase should have a clear boundary and completion signal.
+- Task-driven: roadmap and phase checklists are explicit and updated as work
+  completes.
+- Skimmable: `Planned Changes` should orient the reader quickly without
+  duplicating the task checklists.

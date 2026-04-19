@@ -164,7 +164,9 @@ def write_change_plan(
     slug: str,
     title: str,
     summary: str,
+    planned_changes: list[str],
     expected_behavior: list[str],
+    tasks: list[str],
     hypotheses: list[str],
     tests: list[str],
     observability: list[str],
@@ -177,14 +179,34 @@ def write_change_plan(
     lines = [
         f"# {title}",
         "",
+        "This plan is a living document. Keep `Task Checklist` and `Completion Notes` current as work proceeds. Mark each task as `[x]` immediately after completion.",
+        "",
         "## Change Summary",
         "",
         summary,
         "",
-        "## Expected Behavior",
+        "## Planned Changes",
+        "",
+        "Use this section for a quick summary of the intended edits.",
         "",
     ]
+    lines.extend(f"- {item}" for item in planned_changes)
+    lines.extend(
+        [
+            "",
+            "## Expected Behavior",
+            "",
+        ]
+    )
     lines.extend(f"- {item}" for item in expected_behavior)
+    lines.extend(
+        [
+            "",
+            "## Task Checklist",
+            "",
+        ]
+    )
+    lines.extend(f"- [ ] {item}" for item in tasks)
     lines.extend(
         [
             "",

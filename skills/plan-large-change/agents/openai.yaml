@@ -1,7 +1,7 @@
 interface:
   display_name: "Plan Large Change"
-  short_description: "Clarify, save a phased plan set, and implement a large change."
-  default_prompt: "Use $plan-large-change to inspect this large functionality request, ask clarifying questions if needed, save an overview plus phase files, get approval, and implement phase by phase unless the user explicitly approves the whole plan."
+  short_description: "Clarify, save a detailed phased plan set, and implement a large change."
+  default_prompt: "Use $plan-large-change to inspect this large functionality request, ask clarifying questions if needed, save an overview plus phase files with concise planned-change summaries and explicit tasks, get approval, and implement phase by phase unless the user explicitly approves the whole plan."
 
 policy:
   allow_implicit_invocation: true
